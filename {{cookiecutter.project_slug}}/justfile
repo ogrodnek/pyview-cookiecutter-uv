@@ -1,0 +1,21 @@
+set dotenv-load
+
+start:
+  PYVIEW_SECRET=`openssl rand -base64 16` cd src && uv run uvicorn {{ cookiecutter.package_name }}.app:app --reload --port {{ cookiecutter.port }}
+
+docker-build:
+  docker build -t {{ cookiecutter.package_name }} .
+
+docker-run:
+  docker run -p {{ cookiecutter.port }}:{{ cookiecutter.port }} {{ cookiecutter.package_name }}
+
+# Run all tests
+test:
+  uv run pytest
+
+type-check:
+  uv run pyright
+
+# Adds a new view to the project
+add-view name:
+  uv run pv create-view {{ "{{name}}" }}

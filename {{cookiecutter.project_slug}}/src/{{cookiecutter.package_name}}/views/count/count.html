@@ -1,0 +1,16 @@
+<wa-card class="counter-card">
+    <div class="content">
+        <wa-icon name="calculator" variant="solid" class="calculator-icon"></wa-icon>
+        <h1>Count is {{ "{{count}}" }}</h1>
+        <div class="button-group">
+            <button phx-click="decrement">
+                <wa-icon name="circle-minus" variant="solid"></wa-icon>
+                Decrement
+            </button>
+            <button phx-click="increment">
+                <wa-icon name="circle-plus" variant="solid"></wa-icon>
+                Increment
+            </button>
+        </div>
+    </div>
+</wa-card>

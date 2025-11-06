@@ -1,0 +1,28 @@
+body {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+    margin: 0;
+}
+
+.counter-card {
+    max-width: 400px;
+    padding: 2rem;
+}
+
+.content {
+    text-align: center;
+}
+
+.calculator-icon {
+    font-size: 3rem;
+    color: #667eea;
+}
+
+.button-group {
+    display: flex;
+    gap: 1rem;
+    justify-content: center;
+    margin-top: 2rem;
+}
